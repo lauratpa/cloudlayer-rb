@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cloudlayer.io/v1/account
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      x-api-key:
+      - abcdef
+      User-Agent:
+      - Faraday v2.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 02 Apr 2022 11:24:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      x-powered-by:
+      - Express
+      x-correlation-id:
+      - e577e185-e776-408b-bd9c-56dbd633245a
+      vary:
+      - Origin
+      access-control-allow-credentials:
+      - 'true'
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '59'
+      x-ratelimit-reset:
+      - '0'
+      etag:
+      - W/"c7-t9krEB4VpuAfNVK/NiHy4EEZ2tM"
+      via:
+      - 1.1 google
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      expect-ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FNr4wHnlhcvQAf"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 6f593328bad9f2a8-WAW
+    body:
+      encoding: UTF-8
+      string: '{"calls":0,"subscription":"price-free-0","bytesTotal":0,"bytesLimit":100000000,"computeTimeTotal":0,"computeTimeLimit":3000000,"subType":"limit","uid":"8US0eOJMzqbb022vahk9UEXZ96i1","subActive":true}'
+  recorded_at: Sat, 02 Apr 2022 11:24:44 GMT
+recorded_with: VCR 6.1.0

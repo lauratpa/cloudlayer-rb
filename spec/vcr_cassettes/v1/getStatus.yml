@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cloudlayer.io/v1/getStatus
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      x-api-key:
+      - abcdef
+      User-Agent:
+      - Faraday v2.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 02 Apr 2022 11:38:06 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '16'
+      connection:
+      - keep-alive
+      x-powered-by:
+      - Express
+      x-correlation-id:
+      - ad55beaa-8053-4705-a3f2-99f9131502e6
+      vary:
+      - Origin
+      access-control-allow-credentials:
+      - 'true'
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '59'
+      x-ratelimit-reset:
+      - '0'
+      etag:
+      - W/"10-Cainrf1LCLuizJ7E7SysT/CuG/g"
+      via:
+      - 1.1 google
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      expect-ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xYf69dmxWHC2N8vcIZoo"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 6f5946bf0d70cc7b-WAW
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok "}'
+  recorded_at: Sat, 02 Apr 2022 11:38:06 GMT
+recorded_with: VCR 6.1.0
