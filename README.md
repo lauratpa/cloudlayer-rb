@@ -1,4 +1,4 @@
-# Cloudlayer-rb
+# Cloudlayer-rb [![codecov](https://codecov.io/gh/lauratpa/cloudlayer-rb/branch/main/graph/badge.svg?token=RF3F7I3EFA)](https://codecov.io/gh/lauratpa/cloudlayer-rb)
 
 This as an api wrapper for [cloudlayer.io](https://docs.cloudlayer.io/)
 
