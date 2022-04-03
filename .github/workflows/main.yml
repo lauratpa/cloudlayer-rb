@@ -22,6 +22,8 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
     - name: Run tests
+      env:
+        COVERAGE: true
       run: bundle exec rake
 
     - name: Upload results to codecov
