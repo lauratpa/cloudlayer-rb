@@ -1,5 +1,4 @@
 require "spec_helper"
-require "debug"
 
 RSpec.describe Cloudlayer::Client do
   describe "test" do

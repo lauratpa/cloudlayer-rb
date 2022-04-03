@@ -8,7 +8,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 desc "Run rbs definitions against specs"
 task :test_sig do |t|
-  sh "RBS_TEST_TARGET='Cloudlayer::*' RUBYOPT='-rrbs/test/setup' bundle exec rspec --fail-fast"
+  sh "RBS_TEST_TARGET='Cloudlayer::*' RUBYOPT='-rrbs/test/setup' rspec --fail-fast"
 end
 
 task default: %i[spec standard test_sig]
