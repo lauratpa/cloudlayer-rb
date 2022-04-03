@@ -1,4 +1,56 @@
+
+module Faraday
+  class Connection
+  end
+end
+
+module Dry
+  class Struct
+  end
+end
+
 module Cloudlayer
-  VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+  include Cloudlayer::Types
+
+  VERSION: "0.1.0"
+
+  interface _HTTPResponse
+    def body: () -> Hash
+  end
+
+  module Types
+  end
+
+  class Client
+    BASE_URL: ::String
+    @connection: Faraday::Connection
+
+    def initialize: (api_key: String, ?adapter: Object) -> void
+
+    def self.handle_response: (_HTTPResponse response) -> Hash[Symbol, String | Integer | bool]
+    def connection: () -> Faraday::Connection
+    def test: () -> Hash[Symbol, String]
+    def account: () -> AccountInstance
+
+    private
+    attr_reader api_key: String
+    attr_reader adapter: Object
+  end
+
+  class AccountInstance < ::Dry::Struct
+    def initialize: (Hash[Symbol, String | Integer | bool]) -> void
+
+    def calls: -> Integer
+    def subscription: -> String
+    def bytes_total: -> Integer
+    def bytes_limit: -> Integer
+    def compute_time_total: -> Integer
+    def compute_time_limit: -> Integer
+    def sub_type: -> String
+    def sub_active: -> bool
+    def uid: -> String
+    def credit: -> Integer
+    def success_jobs: -> Integer
+    def error_jobs: -> Integer
+  end
 end
