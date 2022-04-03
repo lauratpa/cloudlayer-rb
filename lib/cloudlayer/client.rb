@@ -7,12 +7,8 @@ module Cloudlayer
   class Client
     BASE_URL = "https://api.cloudlayer.io"
 
-    def self.underscore
-      @underscore ||= Dry::Inflector.new.method(:underscore)
-    end
-
     def self.handle_response(response)
-      response.body.transform_keys { |k| underscore.call(k).to_sym }
+      response.body.transform_keys { |k| Dry::Inflector.new.underscore(k).to_sym }
     end
 
     def initialize(api_key:, adapter: Faraday.default_adapter)

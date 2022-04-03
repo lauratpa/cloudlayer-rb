@@ -3,7 +3,7 @@ require "debug"
 
 RSpec.describe Cloudlayer::Client do
   describe "test" do
-    it "returns whether is everything working correctly" do
+    it "returns whether api key is working correctly" do
       VCR.use_cassette("v1/getStatus") do
         client = described_class.new(api_key: "abcdef")
 
