@@ -11,3 +11,4 @@ gem "standard", "~> 1.3"
 gem "debug", github: "ruby/debug"
 gem "vcr", "~> 6.1"
 gem "rbs"
+gem "codecov", require: false

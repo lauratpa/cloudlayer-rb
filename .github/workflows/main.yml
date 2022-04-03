@@ -15,8 +15,14 @@ jobs:
     name: Test Ruby
     steps:
     - uses: actions/checkout@v2
-    - uses: ruby/setup-ruby@v1
+
+    - name: Setup ruby
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-    - run: bundle exec rake
+    - name: Run tests
+      run: bundle exec rake
+
+    - name: Upload results to codecov
+      uses: codecov/codecov-action@v2

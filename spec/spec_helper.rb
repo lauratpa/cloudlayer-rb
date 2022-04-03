@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+if ENV["CI"].to_s == "true"
+  require "simplecov"
+  SimpleCov.start
+
+  require "codecov"
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+end
+
 require "cloudlayer-rb"
 require "vcr"
 
