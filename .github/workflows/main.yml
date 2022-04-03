@@ -25,6 +25,3 @@ jobs:
       env:
         COVERAGE: true
       run: bundle exec rake
-
-    - name: Upload results to codecov
-      uses: codecov/codecov-action@v2
